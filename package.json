@@ -1,0 +1,25 @@
+{
+  "name": "module-12-challenge",
+  "version": "1.0.0",
+  "description": "- - - -\r # module-12-challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dorsariahi/module-12-challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dorsariahi/module-12-challenge/issues"
+  },
+  "homepage": "https://github.com/dorsariahi/module-12-challenge#readme",
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "inquirer": "^8.2.4",
+    "mysql2": "^3.1.0"
+  }
+}
