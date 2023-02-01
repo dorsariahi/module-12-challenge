@@ -8,13 +8,20 @@ A CLI using Node.js, Inquirer and MySQL that allows the user to view and manage 
 
 # Table of Contents
 * [Description](https://github.com/dorsariahi/module-12-challenge#Description)
+* [User Story](https://github.com/dorsariahi/module-12-challenge#UserStory)
 * [Installation](https://github.com/dorsariahi/module-12-challenge#Installation)
 * [Usage](https://github.com/dorsariahi/module-12-challenge#Usage)
 * [Questions](https://github.com/dorsariahi/module-12-challenge#Questions)
 
-# Installation
-Install dependencies with npm i. Update the database password in the .env file. Create the database by starting MySQL with mysql -u root -p and running SOURCE db/schema.sql;. Seed the database by running SOURCE db/seeds.sql;. Run the application with node index. 
+# User Story
+As a business owner I want to be able to view and manage the departments, roles, and employees in my company So that I can organize and plan my business
 
+# Installation
+1. npm i - to install all file in order for npm to work
+2. npm i inquirer - to use inquirer (to interact with the user via command line)
+3. npm init - to create a json file
+4. npm i mysql - to connect to MySql database
+5. npm console.table - to format tables
 # Usage
 * [Video Walkthrough]()
 
