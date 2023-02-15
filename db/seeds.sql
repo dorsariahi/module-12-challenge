@@ -1,14 +1,21 @@
-INSERT INTO customers (id, first_name, last_name)
-VALUES (001, "Arthur", "Miller"),
-       (002, "Chinua", "Achebe"),
-       (003, "Margaret", "Atwood"),
-       (004, "Gabriel", "Garcia Marquez"),
-       (005, "Simone", "de Beauvoir");
+INSERT INTO department (name)
+VALUES ("legal"),
+       ("engineering"),
+       ("management"),
+       ("new hires");
        
-INSERT INTO customer_order (id, customer_id, order_details)
-VALUES (001, 001, "coffee, milk"),
-       (002, 002, "eggs, cheese"),
-       (003, 003, "organic cereal"),
-       (004, 004, "oranges, peaches"),
-       (005, 005, "ice cream");
+INSERT INTO role (title, salary, department_id)
+VALUES ("sales person", 10000, 1),
+        ("admin", 35000, 2 ),
+        ("engineer", 75000, 3),
+        ("reseption", 20000, 4);
+
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
+VALUES ("Melissa", "Robert", 1, NULL)
+        ("Ali", "Kashani", 4, 1)
+        ("Rock", "Miller", 2, 1)
+        ("Nola", "Moore", 3, 1)
+        ("Nikki", "White", 3, 1)
+        
+
        
