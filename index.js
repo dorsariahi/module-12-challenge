@@ -23,15 +23,17 @@ function startApp() {
             type: "list",
             name: "mainMenu",
             message: "what would you like to do?",
-            choices: ["view all departments", "view all roles", "view all employees", "add a department", "add a role", "add an employee", "Change employee role", "Change employe manager"]
+            choices: ["view all departments", "view all roles", "view all employees", "add a department", "add a role", "add an employee", "Change employee role", "Change employe manager", "Finish"]
         }
     ]).then((input) => {
-        const { options } = input;
+        const options = input.mainMenu;
+        console.log(input.mainMenu)
         if (options === "view all departments") {
+            console.log("test")
             getDepartment();
         }
         if (options === "view all roles") {
-            getRoles();
+            getRole();
         }
         if (options === "view all employees") {
             getEmployee();
@@ -51,26 +53,30 @@ function startApp() {
         if (options === "Change employe manager") {
 
         }
+        if (options === "Finish") {
+            console.log('closing applicaton')
+            process.exit()
+        }
     })
-
 }
-startApp()
 
 getDepartment = () => {
-    const mysql = 'select * form department'
+    const mysql = 'select * from department'
     db.query(mysql, (err, row) => {
         if (err)
             throw err;
         console.table(row);
+        startApp()
     })
 }
 
-getRoles = () => {
-    const mysql = 'select * form roles'
+getRole = () => {
+    const mysql = 'select * from role'
     db.query(mysql, (err, row) => {
         if (err)
             throw err;
         console.table(row);
+        startApp()
     })
 }
 
@@ -80,6 +86,7 @@ getEmployee = () => {
         if (err)
             throw err;
         console.table(row);
+        startApp()
     })
 }
 
@@ -88,7 +95,7 @@ newDepartment = () => {
         {
             type: 'input',
             name: 'newDepartment',
-            message: 'Nmae your department',
+            message: 'Name your department',
             validate: newDepartment => {
                 if (!newDepartment) {
                     console.log('enter the name please')
@@ -99,11 +106,13 @@ newDepartment = () => {
             }
         }
     ]).then(input => {
-        const mysql = 'Insert into the department (name)'
+        const mysql = `Insert into department (name) VALUES ('${input.newDepartment}');`
         db.query(mysql, input.newDepartment, (err, results) => {
             if (err)
                 throw err;
+            startApp()
         })
     })
 
 }
+startApp()
