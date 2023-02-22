@@ -66,7 +66,7 @@ getDepartment = () => {
 }
 
 getRoles = () => {
-    const mysql = 'SELECT * FROM roles'
+    const mysql = 'select * form roles'
     db.query(mysql, (err, row) => {
         if (err)
             throw err;
