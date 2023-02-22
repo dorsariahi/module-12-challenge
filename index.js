@@ -53,3 +53,12 @@ function startApp() {
 }
 startApp()
 
+getDepartment = () => {
+    const mysql = "select * form department"
+    db.query(mysql,(err, row) =>{
+        if (err)
+        throw err;
+        console.table(row)
+    })
+}
+
