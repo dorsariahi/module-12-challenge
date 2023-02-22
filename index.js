@@ -55,10 +55,10 @@ startApp()
 
 getDepartment = () => {
     const mysql = "select * form department"
-    db.query(mysql,(err, row) =>{
+    db.query(mysql, (err, row) => {
         if (err)
-        throw err;
-        console.table(row)
+            throw err;
+        console.table(row);
     })
 }
 
