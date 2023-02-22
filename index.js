@@ -69,7 +69,7 @@ getRoles = () => {
     const mysql = 'SELECT * FROM roles'
     db.query(mysql, (err, row) => {
         if (err)
-            throw err
+            throw err;
         console.table(row);
     })
 }
