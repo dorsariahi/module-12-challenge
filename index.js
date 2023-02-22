@@ -102,8 +102,8 @@ newDepartment = () => {
         const mysql = 'Insert into the department (name)'
         db.query(mysql, input.newDepartment, (err, results) => {
             if (err)
-            throw err;
+                throw err;
         })
     })
-    
+
 }
