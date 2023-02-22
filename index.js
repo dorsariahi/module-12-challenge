@@ -48,8 +48,7 @@ function startApp() {
         if (options === "Change employe manager") {
 
         }
-    }
-    )
+    })
 
 }
 startApp()
