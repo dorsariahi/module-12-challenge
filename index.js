@@ -51,5 +51,4 @@ function startApp() {
     })
 
 }
-startApp()
 
