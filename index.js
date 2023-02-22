@@ -9,10 +9,13 @@ const db = mysql.createConnection(
         password: 'Dorsariahi1!',
         database: 'employee_db'
     },
-    console.log(`Connected to the employee_db database.`)
 );
-
-require("console.table")
+db.connect(err => {
+    if (err)
+        throw (err)
+    console.log('Connected to the employee_db database.')
+    require("console.table")
+})
 
 function startApp() {
     inquirer.prompt([
@@ -54,7 +57,7 @@ function startApp() {
 startApp()
 
 getDepartment = () => {
-    const mysql = "select * form department"
+    const mysql = 'select * form department'
     db.query(mysql, (err, row) => {
         if (err)
             throw err;
