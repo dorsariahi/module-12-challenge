@@ -74,3 +74,11 @@ getRoles = () => {
     })
 }
 
+getEmployee = () => {
+    const mysql = 'select * from employee'
+    db.query(mysql, (err, row) => {
+        if (err)
+            throw err;
+        console.table(row);
+    })
+}
