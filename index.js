@@ -82,3 +82,21 @@ getEmployee = () => {
         console.table(row);
     })
 }
+
+newDepartment = () => {
+    inquirer.prompt([
+        {
+            type: 'input',
+            name: 'newDepartment',
+            message: 'Nmae your department',
+            validate: newDepartment => {
+                if (!newDepartment) {
+                    console.log('enter the name please')
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+        }
+    ])
+}
